@@ -8,7 +8,7 @@ export async function increaseValue(id: string) {
   await db
     .update(user)
     .set({ viewCount: sql`${user.viewCount} + 1` })
-    .where(eq(user.id, id));
+    .where(eq(user.name, id));
   revalidateTag("user-viewcount-" + id, "max");
   //   revalidatePath("/");
   refresh();

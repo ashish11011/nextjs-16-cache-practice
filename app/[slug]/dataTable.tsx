@@ -22,7 +22,7 @@ const Datatable = ({ data }: any) => {
         <div key={item.id}>
           <p>{item.name}</p>
           <p>{item.viewCount}</p>
-          <button onClick={() => handleincreaseclick(item.id)}>
+          <button onClick={() => handleincreaseclick(item.name)}>
             {loading ? "Loading..." : "Increase"}
           </button>
         </div>
